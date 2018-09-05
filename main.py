@@ -14,11 +14,6 @@ player.inventory.extend(('gold', 'rusty knife', 'health potion'))
 player.abilities.extend((s.abilities['Fireball'], s.abilities['Life Siphon'], s.abilities['Ice Bolt']))
 
 
-#print(player)
-#player.currentXP = 324
-#func.levelUp(player)
-#print(player)
-
 print(player.abilities)
 func.showAbilities(player)
 
