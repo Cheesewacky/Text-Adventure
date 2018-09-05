@@ -11,7 +11,7 @@ boss = classes.Boss("Boss", 150, 200, 20, 0, "Demon", 250)
 currentTile = 21
 
 player.inventory.extend(('gold', 'rusty knife', 'health potion'))
-player.abilities.extend((s.abilities[0], s.abilities[1], s.abilities[4]))
+player.abilities.extend((s.abilities['Fireball'], s.abilities['Life Siphon'], s.abilities['Ice Bolt']))
 
 
 #print(player)
@@ -19,7 +19,8 @@ player.abilities.extend((s.abilities[0], s.abilities[1], s.abilities[4]))
 #func.levelUp(player)
 #print(player)
 
-abilityOne = s.abilityDamage[0]
-print(abilityOne)
-print(abilityOne[0])
-print(abilityOne[1])
+print(player.abilities)
+func.showAbilities(player)
+
+print("\n")
+player.cast(enemy, player.abilities[0])
