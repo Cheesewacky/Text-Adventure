@@ -16,7 +16,7 @@ Classes:
         Player
         Item
 
--Functions:
+Functions:
     Contains other functions that I need outside of the classes
     The Functions are as follows:
         isCriticalStrike - calculates if a hit is a critical strike or not
@@ -26,13 +26,13 @@ Classes:
         getInput - takes the player's input and splits it up
         turn - defines how the player can interact with everything
 
--Spells:
+Spells:
     Holds all the spells and information such as damage and mana cost
 
--World:
+World:
     Holds all information on the map and the biome of each tile
 
--Main:
+Main:
     Used for testing right now, but will eventually be where the game starts and ends
     Will add in a way for players to save and continue characters
 
