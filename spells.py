@@ -1,29 +1,44 @@
 abilities = {
-    # Spell ID : Spell Name
-    0: 'Fireball',
-    1: 'Life Siphon',
-    2: 'Slam',
-    3: 'Stab',
-    4: 'Ice Bolt',
-    5: 'Lightning Strike',
-    6: 'Bolster Defense',
-    7: 'Shield Up',
-    8: 'Slash',
-    9: 'Punch',
-    10: 'Kick',
+    # Spell Name : Spell ID
+    'Fireball': 0,
+    'Life Siphon': 1,
+    'Slam': 2,
+    'Stab': 3,
+    'Ice Bolt': 4,
+    'Lightning Strike': 5,
+    'Bolster Defense': 6,
+    'Shield Up': 7,
+    'Slash': 8,
+    'Punch': 9,
+    'Kick': 10,
 }
 
 abilityDamage = {
-    # Spell ID : [Damage, Mana Cost]
-    0: [15, 2],
-    1: [10, 3],
-    2: [15, 2],
-    3: [15, 2],
-    4: [15, 2],
-    5: [15, 3],
-    6: [0, 4],
-    7: [0, 3],
-    8: [10, 3],
-    9: [10, 1],
-    10: [10, 1],
+    # Spell ID : Damage
+    0: 15,
+    1: 10,
+    2: 15,
+    3: 15,
+    4: 15,
+    5: 15,
+    6: 0,
+    7: 0,
+    8: 10,
+    9: 10,
+    10: 10,
+}
+
+abilityCost = {
+    # Spell ID : Mana Cost
+    0: 10,
+    1: 20,
+    2: 0,
+    3: 0,
+    4: 10,
+    5: 15,
+    6: 20,
+    7: 15,
+    8: 0,
+    9: 0,
+    10: 0
 }

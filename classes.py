@@ -1,9 +1,10 @@
 """
 Text Adventure Classes
 """
+
 import functions as func
-from spells import *
 import random as r
+import spells as s
 
 # Defining the base Enemy class
 # This is also going to be the class bosses inherit from
@@ -63,8 +64,8 @@ class Player:
         self.inventory = []
 
     def __str__(self):
-        return "\nName: {}\nCurrent Health: {}\nMax Health: {}\nCurrent Mana: {}\nMax Mana: {}\nStrength: {}\nStamina: {}"\
-               "\nIntelligence: {}\nDefense: {}\nCrit Chance: {}%\nXP to Level: {}\nXP: {}\nLevel: {}"\
+        return "\nName: {}\nCurrent Health: {}\nMax Health: {}\nCurrent Mana: {}\nMax Mana: {}\nStrength: " \
+               "{}\nStamina: {}\nIntelligence: {}\nDefense: {}\nCrit Chance: {}%\nXP to Level: {}\nXP: {}\nLevel: {}"\
             .format(
                 self.name, str(self.currentHealth), str(self.health), str(self.currentMana),
                 str(self.mana), str(self.strength), str(self.stamina), str(self.intelligence),
@@ -82,6 +83,22 @@ class Player:
         else:
             other.health -= damage
             print("\n" + self.name + " attacks the " + other.name + " for " + str(damage) + " damage!")
+
+    def cast(self, other, spell):
+        abilityList = []
+        for ability in s.abilities:
+            abilityList.append(ability)
+        print(self.name + " casts " + abilityList[spell] + "!")
+        isCritical = func.isCriticalStrike(self.criticalChance)
+        damage = r.randrange(s.abilityDamage[spell] - 2, s.abilityDamage[spell] + 2) - other.defense
+        if isCritical:
+            damage = damage * 2
+            other.health -= damage
+            print("\nThe spell is a critical hit!")
+            print("The spell hits for " + str(damage) + " damage!")
+        else:
+            other.health -= damage
+            print("The spell hits for " + str(damage) + " damage!")
 
     def block(self, other):
         defense = self.defense * 1.5

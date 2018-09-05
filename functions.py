@@ -93,6 +93,16 @@ def levelUp(self):
     self.intelligence += 1
 
 
+def showAbilities(self):
+    """
+    Prints the players abilities
+    """
+    abilityList = []
+    for ability in self.abilities:
+        abilityList.append(ability)
+    print(abilityList)
+
+
 def getInput():
     print("\nWhat do you want to do?")
     try:
@@ -103,7 +113,7 @@ def getInput():
     return answer
 
 
-def turn(self):
+def turn(self, other):
     inputOne, inputTwo = getInput()
     if inputOne == 'move':
         pass
